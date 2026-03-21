@@ -51,13 +51,9 @@
 | セラミック球2mm | 3個 | 右手側用トッププレートに組み込み済 |
 | キーキャップ（白） | 30個 | 3DP製 |
 | キーキャップ（青） | 10個 | 3DP製 |
-| キーキャップ（白） | 10個 | 予備・色変え用 |
 | ロータリーエンコーダ用ホイール（青） | 2個 | 3DP製 |
-| ロータリーエンコーダ用ホイール（白） | 2個 | 予備・色変え用 |
 | ロータリーエンコーダホイール用軸（青） | 2個 | 3DP製 |
-| ロータリーエンコーダホイール用軸（白） | 2個 | 予備・色変え用 |
 | 電源スイッチカバー（青） | 2個 | 3DP製 |
-| 電源スイッチカバー（白） | 2個 | 予備・色変え用 |
 | リセットボタン用パーツ | 2個 | 3DP製 |
 | ロータリーエンコーダ | 2個 | |
 | マウスクリック用スイッチ | 2個 | |
@@ -67,8 +63,8 @@
 | マイコン(xiao ble plus) | 2個 | はんだ付け済 |
 | 滑り止め用ゴム足 | 8個 | |
 | ガスケットマウント用クッション | 8個 | |
-| lipoバッテリー | 2個 | テスター頒布時のみ同梱 |
 
+※ TODO: 画像差し替え
 ![all](https://raw.githubusercontent.com/hama-be/zmk-config-SeaGlass/refs/heads/main/docs/img/all.jpg)
 
 
@@ -112,13 +108,18 @@ https://www.amazon.co.jp/dp/B0FBWJFCLB/?coliid=I3BOB6AZA0OG7C
 ### 1-4. 組付け済部品の分解
 
 梱包時に組付けられた状態になっている部品がいくつかあります。\
-組み立てを行う前に、一度それらを分解してください。
+組み立てを行う前に、一度それらを分解してください。半組み立てキット場合の説明を記載していますが、お手元のキットの形態に応じて適宜読み替えてください。
 
 1. 背面のネジを４本外し、底面ケースを取り外します。
 2. 基板とトッププレートを取り外します。半組み立てキットの場合マイコンがケースと干渉するため基板を斜めに持ち上げるように取り外してください。
+![1-4-1](https://raw.githubusercontent.com/hama-be/zmk-config-SeaGlass/refs/heads/main/docs/img/1-4-1.jpeg)
 3. （左手側のみ）ロータリーエンコーダが刺さっているので取り外します。ホイールパーツを軸から取り外します。軸はロータリーエンコーダに刺さったままにしておいて大丈夫です。
-4. トッププレートにキーキャップマウント用のパーツがついているので取り外します。
-5. キーキャップマウントからキーキャップを取り外します。ドライバーやピンセットなどで裏側から軸を押し出すと外しやすいと思います。キーキャップマウントはもう使わないので処分して大丈夫です。
+![1-4-2](https://raw.githubusercontent.com/hama-be/zmk-config-SeaGlass/refs/heads/main/docs/img/1-4-2.jpeg)
+4. （右手側のみ）トラックボール読み取り基板を取り外します。ぐりぐりと引っ張ると抜けます。
+![1-4-3](https://raw.githubusercontent.com/hama-be/zmk-config-SeaGlass/refs/heads/main/docs/img/1-4-3.jpeg)
+5. トッププレートにキーキャップマウント用のパーツがついているので取り外します。
+6. キーキャップマウントからキーキャップを取り外します。ドライバーやピンセットなどで裏側から軸を押し出すと外しやすいと思います。キーキャップマウントはもう使わないので処分して大丈夫です。
+![1-4-4](https://raw.githubusercontent.com/hama-be/zmk-config-SeaGlass/refs/heads/main/docs/img/1-4-4.jpeg)
 
 <a id="2-はんだ付け手順"></a>
 ## 2. はんだ付け手順
@@ -241,20 +242,21 @@ Comming soon...\
 ![rt4](https://raw.githubusercontent.com/hama-be/zmk-config-SeaGlass/refs/heads/main/docs/img/rt4.png)
 5. ボトムプレートの四隅にゴム足を貼り付けてください。ボトムプレートは左右共通です。
 ![rt5](https://raw.githubusercontent.com/hama-be/zmk-config-SeaGlass/refs/heads/main/docs/img/rt5.png)
-6. ボトムプレートにリセットスイッチ用パーツを乗せてください。固定はされないので落とさないよう取り扱いに注意してください。
+6. （任意）左右を磁石で合体させたい方はボトムプレートに磁石をはめ込んでください。
+7. ボトムプレートにリセットスイッチ用パーツを乗せてください。固定はされないので落とさないよう取り扱いに注意してください。
 ![rt6](https://raw.githubusercontent.com/hama-be/zmk-config-SeaGlass/refs/heads/main/docs/img/rt6.png)
-7. ボトムプレートにバッテリーを装着してください。
+9. ボトムプレートにバッテリーを装着してください。
 ![rt7](https://raw.githubusercontent.com/hama-be/zmk-config-SeaGlass/refs/heads/main/docs/img/rt7.png)
-8. 右手側カバーにPOM球を乗せてください。
+9. 右手側カバーにPOM球を乗せてください。
 ![rt8](https://raw.githubusercontent.com/hama-be/zmk-config-SeaGlass/refs/heads/main/docs/img/rt8.png)
-9. マイコンのUSBコネクタをトッププレートの穴にあわせるように意識しながら、斜めから挿し込むように基板をセットしてください。
+10. マイコンのUSBコネクタをトッププレートの穴にあわせるように意識しながら、斜めから挿し込むように基板をセットしてください。
 ![rt9](https://raw.githubusercontent.com/hama-be/zmk-config-SeaGlass/refs/heads/main/docs/img/rt9.png)
-10. リセットスイッチがはずれないよう注意しつつボトムプレートを閉じ、4箇所ネジ止めしてください。このときネジを強く締めすぎるとネジ穴が潰れてしまう可能性があるので、締めすぎには注意してください。
+11. リセットスイッチがはずれないよう注意しつつボトムプレートを閉じ、4箇所ネジ止めしてください。このときネジを強く締めすぎるとネジ穴が潰れてしまう可能性があるので、締めすぎには注意してください。
 ![rt10](https://raw.githubusercontent.com/hama-be/zmk-config-SeaGlass/refs/heads/main/docs/img/rt10.png)
 ![rt11](https://raw.githubusercontent.com/hama-be/zmk-config-SeaGlass/refs/heads/main/docs/img/rt11.png)
-11. 電源スイッチを装着してください。
+12. 電源スイッチを装着してください。
 ![lt5](https://raw.githubusercontent.com/hama-be/zmk-config-SeaGlass/refs/heads/main/docs/img/lt5.png)
-12. キーキャップとキースイッチを取り付けたら完成です！
+13. キーキャップとキースイッチを取り付けたら完成です！
 
 <a id="3-2-左手側組み立て手順"></a>
 ### 3-2. 左手側組み立て手順
