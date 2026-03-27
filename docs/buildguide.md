@@ -234,14 +234,14 @@ Comming soon...\
 1. トッププレートを乗せ、位置がずれないようにキースイッチをいくつかはめ込んでください。
 ![rt1](https://raw.githubusercontent.com/hama-be/zmk-config-SeaGlass/refs/heads/main/docs/img/rt1.png)
 2. 画像を参考にクッションシールを貼ってください。一部カットが必要です。
-![rt2](https://raw.githubusercontent.com/hama-be/zmk-config-SeaGlass/refs/heads/main/docs/img/rt2.png)
+![rt2](https://raw.githubusercontent.com/hama-be/zmk-config-SeaGlass/refs/heads/main/docs/img/rt2.jpg)
 3. バッテリーコネクタを差し込んでください。コネクタの相性によってかなり硬いことがありますが、コネクタの向きがあっていれば画像の深さまで差し込むことができます。
 ![rt3](https://raw.githubusercontent.com/hama-be/zmk-config-SeaGlass/refs/heads/main/docs/img/rt3.png)
 4. トラックボール基板を差し込んでください。
 ![rt4](https://raw.githubusercontent.com/hama-be/zmk-config-SeaGlass/refs/heads/main/docs/img/rt4.png)
 5. ボトムプレートの四隅にゴム足を貼り付けてください。ボトムプレートは左右共通です。
 ![rt5](https://raw.githubusercontent.com/hama-be/zmk-config-SeaGlass/refs/heads/main/docs/img/rt5.png)
-6. （任意）左右を磁石で合体させたい方はボトムプレートに磁石をはめ込んでください。
+6. （任意）左右を磁石で合体させたい方はボトムプレートに磁石をはめ込んでください。底面同士がくっつくように極性をしっかり確認してください。
 7. ボトムプレートにリセットスイッチ用パーツを乗せてください。固定はされないので落とさないよう取り扱いに注意してください。
 ![rt6](https://raw.githubusercontent.com/hama-be/zmk-config-SeaGlass/refs/heads/main/docs/img/rt6.png)
 9. ボトムプレートにバッテリーを装着してください。
