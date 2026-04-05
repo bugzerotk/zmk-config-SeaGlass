@@ -8,6 +8,8 @@ manifest:
       url-base: https://github.com/caksoylar
     - name: 4mplelab
       url-base: https://github.com/4mplelab
+    - name: bugzerotk
+      url-base: https://github.com/bugzerotk
   projects:
     - name: zmk
       remote: zmkfirmware
