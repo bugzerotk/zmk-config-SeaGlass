@@ -9,8 +9,8 @@
 #define NUM 6
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 120
 
-# Keymap Editor を使用すると include <layout_shift_kp_override.dtsi> が一番上に移動するため
-# layout_shift_kp_override.dtsi の内容を直接記載
+// Keymap Editor を使用すると include <layout_shift_kp_override.dtsi> が一番上に移動するため
+// layout_shift_kp_override.dtsi の内容を直接記載
 / {
     behaviors {
         // Keep the original key_press behavior for ZMK core components
