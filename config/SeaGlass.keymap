@@ -150,7 +150,7 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE        &kp PAGE_DOWN      &kp UP_ARROW    &kp PAGE_UP      &kp LS(INSERT)  &lt 6 INS       &kp SCROLLLOCK  &kp CAPSLOCK  &kp RA(PRINTSCREEN)  &kp RS(INSERT)
+&kp ESCAPE        &kp PAGE_UP        &kp UP_ARROW    &kp PAGE_DOWN    &kp LS(INSERT)  &lt 6 INS       &kp SCROLLLOCK  &kp CAPSLOCK  &kp RA(PRINTSCREEN)  &kp RS(INSERT)
 &kp LEFT_CONTROL  &kp LEFT_CONTROL   &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp TAB         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW      &kp RIGHT_CONTROL
 &kp LEFT_SHIFT    &mt LEFT_ALT HOME  &kp DOWN_ARROW  &kp END          &kp ENTER       &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &mt RIGHT_ALT END    &kp RIGHT_SHIFT
 &trans            &trans             &trans          &trans           &trans          &trans          &trans          &trans        &trans               &trans
