@@ -50,6 +50,26 @@
             bindings = <&mkp MB3>;
             key-positions = <40 41>;
         };
+
+        open-square-bracket {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <16 17>;
+        };
+
+        close-square-bracket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <17 18>;
+        };
+
+        open-brace {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <26 27>;
+        };
+
+        close-brace {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <27 28>;
+        };
     };
 
     macros {
@@ -168,11 +188,11 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE        &kp PAGE_UP        &kp UP_ARROW    &kp PAGE_DOWN    &kp LS(INSERT)  &lt 6 INS       &kp SCROLLLOCK  &kp CAPSLOCK  &kp RA(PRINTSCREEN)  &kp RS(INSERT)
-&kp LEFT_CONTROL  &kp LEFT_CONTROL   &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp TAB         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW      &kp RIGHT_CONTROL
-&kp LEFT_SHIFT    &mt LEFT_ALT HOME  &kp DOWN_ARROW  &kp END          &kp ENTER       &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &mt RIGHT_ALT END    &kp RIGHT_SHIFT
-&trans            &trans             &trans          &trans           &trans          &trans          &trans          &trans        &trans               &trans
-&mkp MB1          &mkp MB2
+&kp ESCAPE                  &kp PAGE_UP        &kp UP_ARROW    &kp PAGE_DOWN    &kp LS(INSERT)  &lt 6 INS       &kp SCROLLLOCK  &kp CAPSLOCK  &kp RA(PRINTSCREEN)  &kp RS(INSERT)
+&mt_hp LEFT_CONTROL DELETE  &kp LEFT_CONTROL   &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp TAB         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW      &kp RIGHT_CONTROL
+&kp LEFT_SHIFT              &mt LEFT_ALT HOME  &kp DOWN_ARROW  &kp END          &kp ENTER       &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &mt RIGHT_ALT END    &kp RIGHT_SHIFT
+&trans                      &trans             &trans          &trans           &trans          &trans          &trans          &trans        &trans               &trans
+&mkp MB1                    &mkp MB2
             >;
 
             sensor-bindings = <&encoder_msc_down_up>, <&encoder_msc_left_right>;
