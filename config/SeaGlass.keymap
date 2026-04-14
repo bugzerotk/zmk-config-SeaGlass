@@ -178,10 +178,10 @@
 
         NUM {
             bindings = <
-&kp SLASH             &kp NUMBER_7           &kp NUMBER_8  &kp NUMBER_9  &kp MINUS        &kp F10  &kp F7  &kp F8  &kp F9  &kp KP_NUMLOCK
-&kp ASTERISK          &kp NUMBER_4           &kp NUMBER_5  &kp NUMBER_6  &kp PLUS         &kp F11  &kp F4  &kp F5  &kp F6  &none
-&mt LEFT_SHIFT EQUAL  &kp NUMBER_1           &kp NUMBER_2  &kp NUMBER_3  &kp ENTER        &kp F12  &kp F1  &kp F2  &kp F3  &kp RSHFT
-&trans                &mt LEFT_ALT NUMBER_0  &kp NUMBER_0  &kp PERIOD    &mt LCTRL ENTER  &trans   &trans  &trans  &trans  &trans
+&kp SLASH             &kp NUMBER_7           &kp NUMBER_8  &kp NUMBER_9  &kp MINUS        &kp F10  &kp F7  &kp F8  &kp F9               &kp KP_NUMLOCK
+&kp ASTERISK          &kp NUMBER_4           &kp NUMBER_5  &kp NUMBER_6  &kp PLUS         &kp F11  &kp F4  &kp F5  &kp F6               &none
+&mt LEFT_SHIFT EQUAL  &mt LEFT_ALT NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER        &kp F12  &kp F1  &kp F2  &mt_hp RIGHT_ALT F3  &kp RSHFT
+&trans                &mt LEFT_GUI NUMBER_0  &kp NUMBER_0  &kp PERIOD    &mt LCTRL ENTER  &trans   &trans  &trans  &trans               &trans
 &mkp MB1              &mkp MB2
             >;
 
