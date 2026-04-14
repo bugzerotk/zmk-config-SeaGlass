@@ -184,6 +184,10 @@
 &trans                &mt LEFT_ALT NUMBER_0  &kp NUMBER_0  &kp PERIOD    &mt LCTRL ENTER  &trans   &trans  &trans  &trans  &trans
 &mkp MB1              &mkp MB2
             >;
+
+            sensor-bindings =
+                <&inc_dec_kp PAGE_UP PAGE_DOWN>,
+                <&inc_dec_kp LS(TAB) TAB>;
         };
 
         ARROW {
