@@ -167,6 +167,13 @@
             #binding-cells = <0>;
             bindings = <&mt LEFT_ALT X>, <&kp LEFT_WIN>;
         };
+
+        td_dot_alt_win: td_dot_alt_win {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_DOT_ALT_WIN";
+            #binding-cells = <0>;
+            bindings = <&mt LEFT_ALT PERIOD>, <&kp LEFT_WIN>;
+        };
     };
 
     keymap {
@@ -176,7 +183,7 @@
             bindings = <
 &lt 5 Q           &kp W          &kp E           &kp R           &kp T                   &kp Y                       &kp U         &kp I           &kp O                       &lt 4 P
 &tl_tp 2 A        &kp S          &kp D           &kp F           &kp G                   &kp H                       &kp J         &kp K           &kp L                       &lt 2 SEMICOLON
-&mt LEFT_SHIFT Z  &td_x_alt_win  &kp C           &kp V           &kp B                   &kp N                       &kp M         &kp COMMA       &mt RIGHT_ALT PERIOD        &mt RSHFT SLASH
+&mt LEFT_SHIFT Z  &td_x_alt_win  &kp C           &kp V           &kp B                   &kp N                       &kp M         &kp COMMA       &td_dot_alt_win             &mt RSHFT SLASH
 &kp ESCAPE        &kp LEFT_WIN   &lt_hp 1 LANG2  &lt_hp 3 SPACE  &mt_hp LCTRL BACKSPACE  &mt_hp RIGHT_CONTROL ENTER  &lt_hp 3 TAB  &lt_hp 1 LANG1  &mt RIGHT_WIN LEFT_BRACKET  &kp RIGHT_BRACKET
 &mkp MB1          &mkp MB2
             >;
@@ -224,10 +231,10 @@
 
         MOUSE {
             bindings = <
-&none           &none         &none   &none   &none   &kp ESCAPE  &mkp MB3  &kp C_AC_BACK  &kp C_AC_FORWARD  &none
-&none           &none         &none   &none   &none   &none       &none     &none          &none             &none
-&kp LEFT_SHIFT  &kp LEFT_ALT  &none   &none   &none   &none       &none     &none          &kp RIGHT_ALT     &kp RIGHT_SHIFT
-&trans          &trans        &trans  &trans  &trans  &trans      &trans    &trans         &trans            &trans
+&none           &none         &none     &none     &none   &kp ESCAPE  &mkp MB3  &kp C_AC_BACK  &kp C_AC_FORWARD  &none
+&none           &mkp MB3      &mkp MB2  &mkp MB1  &none   &none       &none     &none          &none             &none
+&kp LEFT_SHIFT  &kp LEFT_ALT  &none     &none     &none   &none       &none     &none          &kp RIGHT_ALT     &kp RIGHT_SHIFT
+&trans          &trans        &trans    &trans    &trans  &trans      &trans    &trans         &trans            &trans
 &mkp MB1        &mkp MB2
             >;
 
