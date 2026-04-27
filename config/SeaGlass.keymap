@@ -195,11 +195,11 @@
 
         default_layer {
             bindings = <
-&lt 5 Q                 &kp W              &kp E           &kp R           &kp T                   &kp Y                       &kp U         &kp I           &kp O                    &lt 4 P
-&tl_tp 2 A              &kp S              &kp D           &kp F           &kp G                   &kp H                       &kp J         &kp K           &kp L                    &lt 2 SEMICOLON
-&mt LEFT_SHIFT Z        &mt_hp LEFT_ALT X  &kp C           &kp V           &kp B                   &kp N                       &kp M         &kp COMMA       &mt_hp RIGHT_ALT PERIOD  &mt RSHFT SLASH
-&mt_hp LEFT_WIN ESCAPE  &kp LEFT_ALT       &lt_hp 1 LANG2  &lt_hp 3 SPACE  &mt_hp LCTRL BACKSPACE  &mt_hp RIGHT_CONTROL ENTER  &lt_hp 3 TAB  &lt_hp 1 LANG1  &kp RIGHT_ALT            &mt_hp RIGHT_WIN ESCAPE
-&mkp MB1                &mkp MB2
+&lt 5 Q                   &kp W              &kp E           &kp R           &kp T                   &kp Y                       &kp U         &kp I           &kp O                    &lt 4 P
+&tl_tp 2 A                &kp S              &kp D           &kp F           &kp G                   &kp H                       &kp J         &kp K           &kp L                    &lt 2 SEMICOLON
+&mt LEFT_SHIFT Z          &mt_hp LEFT_ALT X  &kp C           &kp V           &kp B                   &kp N                       &kp M         &kp COMMA       &mt_hp RIGHT_ALT PERIOD  &mt RSHFT SLASH
+&mt_hp LEFT_SHIFT ESCAPE  &kp LEFT_WIN       &lt_hp 1 LANG2  &lt_hp 3 SPACE  &mt_hp LCTRL BACKSPACE  &mt_hp RIGHT_CONTROL ENTER  &lt_hp 3 TAB  &lt_hp 1 LANG1  &kp RIGHT_WIN            &mt_hp RIGHT_SHIFT ESCAPE
+&mkp MB1                  &mkp MB2
             >;
 
             sensor-bindings =
