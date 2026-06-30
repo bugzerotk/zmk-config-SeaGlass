@@ -10,6 +10,8 @@ manifest:
       url-base: https://github.com/caksoylar
     - name: 4mplelab
       url-base: https://github.com/4mplelab
+    - name: bugzerotk
+      url-base: https://github.com/bugzerotk
   projects:
     - name: zmk
       remote: cormoran
@@ -39,5 +41,8 @@ manifest:
     - name: zmk-feature-charge-indicator
       remote: 4mplelab
       revision: main
+    - name: zmk-layout-shift
+      remote: bugzerotk
+      revision: v1
   self:
     path: config
