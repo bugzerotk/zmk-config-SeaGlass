@@ -218,7 +218,9 @@
                                                                                                      &mkp MB1                    &mkp MB2
             >;
 
-            sensor-bindings = <&rsr_scroll_ud &rsr_scroll_lr>;
+            sensor-bindings =
+                <&inc_dec_kp UP_ARROW DOWN_ARROW>,
+                <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
         };
 
         SYMBOL {
