@@ -46,7 +46,7 @@
         device = <&trackball>;
         input-processors = <&mouse_runtime_input_processor>;
         scroller {
-            layers = <7>;
+            layers = <4>;
             input-processors = <&zip_xy_to_scroll_mapper
                                 &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT
                                 &scroll_runtime_input_processor
