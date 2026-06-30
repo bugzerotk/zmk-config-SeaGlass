@@ -1,3 +1,4 @@
+#include <layout_shift.dtsi>
 #include <behaviors/runtime-sensor-rotate.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -7,6 +8,29 @@
 #undef ZMK_POINTING_DEFAULT_SCRL_VAL
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 120
+
+// Keymap Editor を使用すると include <layout_shift_kp_override.dtsi> が一番上に移動するため
+// layout_shift_kp_override.dtsi の内容を直接記載
+
+/ {
+    behaviors {
+        // Keep the original key_press behavior for ZMK core components
+
+        original_key_press: original_key_press {
+            compatible = "zmk,behavior-key-press";
+            #binding-cells = <1>;
+            label = "KEY_PRESS";
+        };
+
+        // Override the existing &kp behavior to use our custom implementation
+
+        kp: key_press {
+            compatible = "zmk,behavior-layout-shift-key-press";
+            #binding-cells = <1>;
+            label = "LAYOUT_SHIFT_KEY_PRESS";
+        };
+    };
+};
 
 &mt {
     flavor = "balanced";
@@ -27,34 +51,45 @@
             key-positions = <40 41>;
         };
 
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <10 11>;
+        open-square-bracket {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <16 17>;
             layers = <0>;
         };
 
-        backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <8 9>;
+        close-square-bracket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <17 18>;
             layers = <0>;
         };
 
-        input_eisu {
-            bindings = <&kp LANG2>;
-            key-positions = <34 33>;
+        open-brace {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <26 27>;
             layers = <0>;
         };
 
-        input_kana {
-            bindings = <&kp LANG1>;
-            key-positions = <35 36>;
+        close-brace {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <27 28>;
             layers = <0>;
         };
 
-        escape {
-            bindings = <&kp ESC>;
-            key-positions = <1 0>;
+        parentheses {
+            bindings = <&kakko>;
+            key-positions = <6 8>;
             layers = <0>;
+        };
+
+        square-brackets {
+            bindings = <&dai_kakkko>;
+            key-positions = <16 18>;
+            layers = <0>;
+        };
+
+        curly-brackets {
+            bindings = <&nami_kakko>;
+            key-positions = <26 28>;
         };
     };
 
@@ -64,6 +99,27 @@
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
+        };
+
+        kakko: kakko {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT_ARROW>;
+            label = "KAKKO";
+        };
+
+        dai_kakkko: daikakkko {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT_ARROW>;
+            label = "DAIKAKKKO";
+        };
+
+        nami_kakko: nami_kakko {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT_ARROW>;
+            label = "NAMI_KAKKO";
         };
     };
 
@@ -91,6 +147,65 @@
             tap-ms = <20>;
             cw-binding = <&msc SCRL_LEFT>;
             ccw-binding = <&msc SCRL_RIGHT>;
+        };
+
+        lt_hp: lt_hp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_HP";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <300>;
+        };
+
+        mt_hp: mt_hp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_HP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <300>;
+        };
+
+        tl_tp: tl_tp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TL_TP";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <300>;
+            flavor = "tap-preferred";
+        };
+
+        td_lalt_win: td_lalt_win {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_LALT_WIN";
+            #binding-cells = <0>;
+            bindings = <&mt_hp LEFT_ALT LEFT_ALT>, <&kp LEFT_WIN>;
+        };
+
+        td_dot_alt_win: td_dot_alt_win {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_DOT_ALT_WIN";
+            #binding-cells = <0>;
+            bindings = <&mt_hp LEFT_ALT PERIOD>, <&kp LEFT_WIN>;
+        };
+
+        td_x_alt_win: td_x_alt_win {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_X_ALT_WIN";
+            #binding-cells = <0>;
+            bindings = <&mt_hp LEFT_ALT X>, <&kp LEFT_WIN>;
+        };
+
+        td_ralt_win: td_ralt_win {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_RALT_WIN";
+            #binding-cells = <0>;
+            bindings = <&mt_hp RIGHT_ALT RIGHT_ALT>, <&kp LEFT_WIN>;
         };
     };
 
