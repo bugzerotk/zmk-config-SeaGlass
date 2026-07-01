@@ -8,8 +8,8 @@ manifest:
       url-base: https://github.com/caksoylar
     - name: 4mplelab
       url-base: https://github.com/4mplelab
-    - name: bugzerotk
-      url-base: https://github.com/bugzerotk
+    - name: kot149
+      url-base: https://github.com/kot149
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -25,7 +25,7 @@ manifest:
       remote: 4mplelab
       revision: main
     - name: zmk-layout-shift
-      remote: bugzerotk
-      revision: v1
+      remote: kot149
+      revision: v2
   self:
     path: config
