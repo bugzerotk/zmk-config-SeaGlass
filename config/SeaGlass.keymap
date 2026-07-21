@@ -10,12 +10,14 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 120
 
 &tog_ls { layout-maps = <&layout_shift_map_us_to_jis>; };
+
 &tog_ls_on { layout-maps = <&layout_shift_map_us_to_jis>; };
+
 &tog_ls_off { layout-maps = <&layout_shift_map_us_to_jis>; };
 
 &mt {
     flavor = "balanced";
-    quick-tap-ms = <300>;
+    quick-tap-ms = <180>;
 };
 
 &lt {
@@ -102,12 +104,15 @@
         // Keymap Editor を使用すると include <layout_shift_kp_override.dtsi> が一番上に移動するため
         // layout_shift_kp_override.dtsi の内容を直接記載
         // Keep the original key_press behavior for ZMK core components
+
         original_key_press: original_key_press {
             compatible = "zmk,behavior-key-press";
             #binding-cells = <1>;
             label = "KEY_PRESS";
         };
+
         // Override the existing &kp behavior to use our custom implementation
+
         kp: key_press {
             compatible = "zmk,behavior-layout-shift-key-press";
             #binding-cells = <1>;
@@ -207,8 +212,8 @@
         default_layer {
             bindings = <
 &lt 5 Q                   &kp W              &kp E           &kp R           &kp T                   &kp Y                       &kp U         &kp I           &kp O                    &lt 4 P
-&tl_tp 2 A                &kp S              &kp D           &kp F           &kp G                   &kp H                       &kp J         &kp K           &kp L                    &mo 2
-&mt LEFT_SHIFT Z          &mt_hp LEFT_ALT X  &kp C           &kp V           &kp B                   &kp N                       &kp M         &kp COMMA       &mt_hp RIGHT_ALT PERIOD  &kp RSHFT
+&tl_tp 2 A                &kp S              &kp D           &kp F           &kp G                   &kp H                       &kp J         &kp K           &kp L                    &lt_hp 2 LEFT_BRACKET
+&mt LEFT_SHIFT Z          &mt_hp LEFT_ALT X  &kp C           &kp V           &kp B                   &kp N                       &kp M         &kp COMMA       &mt_hp RIGHT_ALT PERIOD  &mt_hp RSHFT RIGHT_BRACKET
 &mt_hp LEFT_SHIFT ESCAPE  &kp LEFT_WIN       &lt_hp 1 LANG2  &lt_hp 3 SPACE  &mt_hp LCTRL BACKSPACE  &mt_hp RIGHT_CONTROL ENTER  &lt_hp 3 TAB  &lt_hp 1 LANG1  &kp RIGHT_WIN            &mt_hp RIGHT_SHIFT ESCAPE
 &mkp MB1                  &mkp MB2
             >;
