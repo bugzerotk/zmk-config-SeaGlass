@@ -23,7 +23,8 @@
 
 &lt {
     flavor = "balanced";
-    quick-tap-ms = <300>;
+    quick-tap-ms = <200>;
+    tapping-term-ms = <180>;
 };
 
 / {
@@ -153,34 +154,6 @@
             flavor = "tap-preferred";
         };
 
-        td_lalt_win: td_lalt_win {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_LALT_WIN";
-            #binding-cells = <0>;
-            bindings = <&mt_hp LEFT_ALT LEFT_ALT>, <&kp LEFT_WIN>;
-        };
-
-        td_dot_alt_win: td_dot_alt_win {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_DOT_ALT_WIN";
-            #binding-cells = <0>;
-            bindings = <&mt_hp LEFT_ALT PERIOD>, <&kp LEFT_WIN>;
-        };
-
-        td_x_alt_win: td_x_alt_win {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_X_ALT_WIN";
-            #binding-cells = <0>;
-            bindings = <&mt_hp LEFT_ALT X>, <&kp LEFT_WIN>;
-        };
-
-        td_ralt_win: td_ralt_win {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_RALT_WIN";
-            #binding-cells = <0>;
-            bindings = <&mt_hp RIGHT_ALT RIGHT_ALT>, <&kp LEFT_WIN>;
-        };
-
         td_lang2_alt_win: td_lang2_alt_win {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_LANG2_ALT_WIN";
@@ -188,6 +161,8 @@
             bindings =
                 <&mt_hp LEFT_ALT LANGUAGE_2>,
                 <&mt_hp LEFT_WIN LANGUAGE_1>;
+
+            tapping-term-ms = <180>;
         };
     };
 
