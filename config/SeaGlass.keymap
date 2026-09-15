@@ -205,10 +205,10 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE                 &kp LS(INS)       &kp UP_ARROW    &kp PAGE_UP              &kp HOME             &lt 6 INS       &kp SCROLLLOCK  &kp CAPSLOCK              &kp RA(PRINTSCREEN)   &kp RS(INSERT)
-&mt_hp LEFT_CONTROL ENTER  &kp LEFT_CONTROL  &kp LEFT_ARROW  &kp RIGHT_ARROW          &kp TAB              &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW              &kp RIGHT_ARROW       &kp RIGHT_CONTROL
-&kp LEFT_SHIFT             &kp INS           &kp DOWN_ARROW  &kp PAGE_DOWN            &kp END              &kp HOME        &kp PAGE_DOWN   &mt_hp RIGHT_GUI PAGE_UP  &mt_hp RIGHT_ALT END  &kp RIGHT_SHIFT
-&trans                     &trans            &trans          &mt_hp LEFT_SHIFT SPACE  &mt_hp LCTRL DELETE  &trans          &trans          &trans                    &trans                &trans
+&kp ESCAPE                 &kp LS(INS)       &kp UP_ARROW    &kp PAGE_UP      &kp HOME             &lt 6 INS       &kp SCROLLLOCK  &kp CAPSLOCK              &kp RA(PRINTSCREEN)   &kp RS(INSERT)
+&mt_hp LEFT_CONTROL ENTER  &kp LEFT_CONTROL  &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp TAB              &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW              &kp RIGHT_ARROW       &kp RIGHT_CONTROL
+&kp LEFT_SHIFT             &kp INS           &kp DOWN_ARROW  &kp PAGE_DOWN    &kp END              &kp HOME        &kp PAGE_DOWN   &mt_hp RIGHT_GUI PAGE_UP  &mt_hp RIGHT_ALT END  &kp RIGHT_SHIFT
+&trans                     &trans            &trans          &trans           &mt_hp LCTRL DELETE  &trans          &trans          &trans                    &trans                &trans
 &mkp MB1                   &mkp MB2
             >;
 
